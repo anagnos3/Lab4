@@ -73,6 +73,24 @@ public class Pokemon {
     }
 
     /**
+     * makes pokemon from inputs.
+     * @param hit hitpoints
+     * @param attack attacklevel
+     * @param defense defenselevel
+     * @param label name
+     */
+    public Pokemon(final int hit, final int attack, final int defense, final String label) {
+        final int d6num = 6;
+        final int d20num = 20;
+        this.d6 = new Dice(d6num);
+        this.d20 = new Dice(d20num);
+        this.hitPoints = hit;
+        this.attackLevel = attack;
+        this.defenseLevel = defense;
+        this.name = label;
+    }
+
+    /**
      * Attack another Pokemon.
      * <p>
      * Calling this method will cause this Pokemon to attack another Pokemon as follows:
